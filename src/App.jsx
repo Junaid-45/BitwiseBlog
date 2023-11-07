@@ -13,7 +13,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from "./firebase/firebase.config";
 import Contact from "./pages/Contact";
 import LoginPage from "./pages/Auth/LoginPage";
-import Signup from "./pages/Auth/Signup";
+import SignUp from "./pages/Auth/Signup";
 
 const auth = getAuth(app);
 
@@ -54,7 +54,7 @@ export default function App() {
 
         <Route
           path="/signup"
-          element={status ? <Navigate to={"/"} /> : <Signup />}
+          element={status ? <Navigate to={"/"} /> : <SignUp />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -21,7 +21,7 @@ const registerSchema = yup.object().shape({
     ),
 });
 
-export default function Signup() {
+export default function SignUp() {
   const firebase = useFirebaseContext();
   const navigate = useNavigate();
   const { status } = useSelector((state) => state.userState);
