@@ -1,11 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/1.png";
+import logo from "../assets/1.png";
 import { useEffect, useState } from "react";
 import * as yup from "yup";
 import toast from "react-hot-toast";
-import { login } from "../../slices/userSlice";
+import { login } from "../slices/userSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useFirebaseContext } from "../../firebase/FirebaseProvider";
+import { useFirebaseContext } from "../firebase/FirebaseProvider";
 import { ScaleLoader } from "react-spinners";
 
 const loginSchema = yup.object().shape({

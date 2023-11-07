@@ -1,10 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/1.png";
+import logo from "../assets/1.png";
 import { useEffect, useState } from "react";
 import * as yup from "yup";
 import toast from "react-hot-toast";
 import { useSelector } from "react-redux";
-import { useFirebaseContext } from "../../firebase/FirebaseProvider";
+import { useFirebaseContext } from "../firebase/FirebaseProvider";
 import { ScaleLoader } from "react-spinners";
 
 const registerSchema = yup.object().shape({
@@ -21,7 +21,7 @@ const registerSchema = yup.object().shape({
     ),
 });
 
-export default function SignUp() {
+export default function Signup() {
   const firebase = useFirebaseContext();
   const navigate = useNavigate();
   const { status } = useSelector((state) => state.userState);

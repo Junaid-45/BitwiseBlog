@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { Image, User } from "lucide-react";
 import { Editor } from "@tinymce/tinymce-react";
 import { useSelector } from "react-redux";
