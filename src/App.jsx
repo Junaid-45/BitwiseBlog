@@ -13,7 +13,8 @@ import SingleArticle from "./pages/SingleArticle";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from "./firebase/firebase.config";
 import Contact from "./pages/Contact";
-import LoginPage from "./pages/auth/LoginPage";
+import LoginPage from "./pages/Auth/LoginPage";
+
 const auth = getAuth(app);
 
 export default function App() {
