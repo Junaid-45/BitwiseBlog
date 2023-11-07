@@ -3,7 +3,6 @@ import HomeLayout from "./layouts/HomeLayout";
 import Homepage from "./pages/Homepage";
 import Articles from "./pages/Articles";
 import About from "./pages/About";
-import LoginPage from "./pages/Auth/LoginPage";
 import Signup from "./pages/Auth/Signup";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "react-hot-toast";
@@ -14,6 +13,7 @@ import SingleArticle from "./pages/SingleArticle";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from "./firebase/firebase.config";
 import Contact from "./pages/Contact";
+import LoginPage from "./pages/Auth/LoginPage";
 const auth = getAuth(app);
 
 export default function App() {
