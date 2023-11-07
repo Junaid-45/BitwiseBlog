@@ -14,7 +14,6 @@ import SingleArticle from "./pages/SingleArticle";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from "./firebase/firebase.config";
 import Contact from "./pages/Contact";
-
 const auth = getAuth(app);
 
 export default function App() {

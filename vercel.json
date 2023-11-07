@@ -1,8 +1,8 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "source": "/.*",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
