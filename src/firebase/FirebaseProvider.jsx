@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext } from "react";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -18,9 +18,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
-
 import app from "./firebase.config";
-import { data } from "autoprefixer";
 
 export const FirebaseContext = createContext();
 

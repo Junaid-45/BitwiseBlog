@@ -7,7 +7,6 @@ import { useFirebaseContext } from "../firebase/FirebaseProvider";
 const Articles = () => {
   const dispatch = useDispatch();
   const firebase = useFirebaseContext();
-
   const { posts, isLoading, error } = useSelector((state) => state.postState);
 
   useEffect(() => {

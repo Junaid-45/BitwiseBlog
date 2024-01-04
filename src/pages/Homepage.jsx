@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import banner from "../assets/banner-img.png";
 import { useNavigate } from "react-router-dom";
 import PostCard from "../components/PostCard";
@@ -54,7 +54,6 @@ let posts = [
 
 const Homepage = () => {
   const navigate = useNavigate();
-  const [active, setActive] = useState(0);
   const { status } = useSelector((state) => state.userState);
 
   return (
@@ -98,9 +97,6 @@ const Homepage = () => {
         <div className="h-[90px] w-[90px] rounded-full bg-gradient-to-tr from-indigo-600 to-blue-500 absolute top-[50px] left-[1050px]"></div>
         <div className="h-[90px] w-[90px] rounded-full bg-gradient-to-tr from-indigo-600 to-blue-500 absolute bottom-[50px] -left-[100px]"></div>
         <div className="h-[147px] w-[147px] rounded-full bg-gradient-to-tr from-indigo-600 to-blue-500 absolute bottom-[70px] left-[1000px]"></div>
-        {/* <div className="h-[130px] w-[130px] rounded-full bg-gradient-to-tr from-indigo-600 to-[#7851E9] absolute top-[20px] -left-[150px]"></div>
-        <div className="h-[130px] w-[130px] rounded-full bg-gradient-to-tr from-indigo-600 to-[#7851E9] absolute top-[50px] -left-[150px]"></div>
-        <div className="h-[130px] w-[130px] rounded-full bg-gradient-to-tr from-indigo-600 to-[#7851E9] absolute top-[50px] -left-[150px]"></div> */}
       </section>
       <section className="banner py-[80px] mx-auto flex items-center relative bg-gradient-to-br from-indigo-600 to-[#7851E8]">
         <div className="bg-section-bg h-full w-full absolute bg-full bg-no-repeat bg-center"></div>
@@ -139,7 +135,6 @@ const Homepage = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          {/* </div> */}
         </div>
       </section>
       <section className="banner py-[80px] mx-auto flex items-center relative">

@@ -7,6 +7,7 @@ import { login } from "../slices/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useFirebaseContext } from "../firebase/FirebaseProvider";
 import { ScaleLoader } from "react-spinners";
+import { Eye, EyeOff } from "lucide-react";
 
 const loginSchema = yup.object().shape({
   email: yup
@@ -27,11 +28,17 @@ export default function LoginPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isLoading, setIsloading] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState("");
   const { status } = useSelector((state) => state.userState);
   const [userData, setUserData] = useState({
     email: "",
     password: "",
   });
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleChange = (e) => {
     setUserData({
@@ -120,14 +127,23 @@ export default function LoginPage() {
                     Password
                   </label>
                 </div>
-                <div className="mt-2">
+                <div className="mt-2 relative">
                   <input
                     id="password"
                     name="password"
-                    type="password"
-                    value={userData.password}
+                    // toggle type functionality
+                    type={showPassword ? "text" : "password"}
+                    value={userData.password || password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    autoComplete="current-password"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
+                  <div
+                    onClick={togglePasswordVisibility}
+                    className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
+                  >
+                    {showPassword ? <EyeOff /> : <Eye />}
+                  </div>
                 </div>
               </div>
 

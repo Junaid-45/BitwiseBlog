@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Image, User } from "lucide-react";
+import { User } from "lucide-react";
 import { Editor } from "@tinymce/tinymce-react";
 import { useSelector } from "react-redux";
 import toast from "react-hot-toast";
@@ -10,7 +10,6 @@ const AddArticles = () => {
   const firebase = useFirebaseContext();
   const navigate = useNavigate();
   const [query] = useSearchParams();
-
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
   const [summary, setSummary] = useState("");

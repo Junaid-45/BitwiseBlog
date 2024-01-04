@@ -1,6 +1,5 @@
-import { Heart, MessageSquare, Star, StarIcon } from "lucide-react";
+import { Heart, MessageSquare, StarIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
-// import { useSelector } from "react-redux";
 import preview from "../assets/image-preview.png";
 import { Link } from "react-router-dom";
 import { useFirebaseContext } from "../firebase/FirebaseProvider";
@@ -8,10 +7,8 @@ import { useFirebaseContext } from "../firebase/FirebaseProvider";
 const ArticleCard = ({ post, id }) => {
   const firebase = useFirebaseContext();
   const [image, setImage] = useState("");
-  //   const {} = useSelector()
 
   useEffect(() => {
-    // setImage(firebase.getImage(post.thumbnail));
     firebase
       .getImage(post.thumbnail)
       .then((url) => {
@@ -19,7 +16,6 @@ const ArticleCard = ({ post, id }) => {
       })
       .catch(console.log);
   }, []);
-  //   console.log(image);
 
   return (
     <div className="flex h-[180px] overflow-hidden p-[15px] w-full gap-4 shadow-sm shadow-gray-300 rounded-xl my-3 bg-white ">

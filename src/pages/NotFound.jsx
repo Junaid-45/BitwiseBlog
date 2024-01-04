@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
-  return (
-    <div>NotFound</div>
-  )
-}
+  const navigate = useNavigate();
+  return <div>{navigate("/")} </div>;
+};
 
-export default NotFound
+export default NotFound;
